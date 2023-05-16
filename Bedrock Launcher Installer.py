@@ -42,6 +42,13 @@ file_path = r'C:\Bedrock\bedrock_tools.py'
 # Download the file and save it to the specified path
 urllib.request.urlretrieve(url, file_path)
 
+# Define the URL and file path
+url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/ui2.py'
+file_path = 'C:\Bedrock\ui2.py'
+
+# Download the file and save it to the specified path
+urllib.request.urlretrieve(url, file_path)
+
 
 install_fov = input('would you like to install fov changer (https://github.com/xroix/MCBE-Win10-FOV-Changer) (credit: "xroix")? (y/n)')
 
