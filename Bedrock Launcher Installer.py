@@ -54,5 +54,19 @@ if install_fov.lower == 'y' or 'yes':
 
     os.system(r'powershell -command "Expand-Archive -Path "C:\Bedrock\fov_changer.zip" -DestinationPath "C:\Bedrock""')
 
+f = open(r'C\Bedrock\backup_location.txt', 'w')
+f.write('C:\\Bedrock\\backup')
+f.close()
+
+f = open(r'C\Bedrock\days_between_backups.txt', 'w')
+f.write('30')
+f.close()
+
+f = open(r'C\Bedrock\last_backup.json', 'w')
+f.write('[2007, 8, 6]')
+f.close()
+
+
+
 print (os.system(r'mklink "C:\Users\jenni\Desktop\Bedrock Launcher.ink" "C:\Bedrock\ui2.py"'))
 time.sleep(10)
