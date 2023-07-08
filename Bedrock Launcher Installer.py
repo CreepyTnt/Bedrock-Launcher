@@ -35,7 +35,7 @@ file_path = 'C:\Bedrock\startup.py'
 # Download the file and save it to the specified path
 urllib.request.urlretrieve(url, file_path)
 
-url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/bedrock_startup.py'
+url = 'https://github.com/CreepyTnt/Bedrock-Launcher/raw/main/bedrock_startup.py'
 file_path = f'C:\\Users\\{username}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\BedrockLauncherBackups.pyw'
 
 # Download the file and save it to the specified path
@@ -44,14 +44,14 @@ urllib.request.urlretrieve(url, file_path)
 
 
 # Define the URL and file path
-url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/bedrock_tools.py'
+url = 'https://github.com/CreepyTnt/Bedrock-Launcher/raw/main/bedrock_tools.py'
 file_path = r'C:\Bedrock\bedrock_tools.py'
 
 # Download the file and save it to the specified path
 urllib.request.urlretrieve(url, file_path)
 
 # Define the URL and file path
-url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/ui.pyw'
+url = 'https://github.com/CreepyTnt/Bedrock-Launcher/raw/main/ui.pyw'
 file_path = 'C:\\Bedrock\\ui.py'
 
 # Download the file and save it to the specified path
