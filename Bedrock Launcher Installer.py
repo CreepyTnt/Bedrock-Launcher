@@ -15,7 +15,7 @@ modules = [
 ]
 import time
 
-print ('TO CREATE A DESKTOP SHORTCUT, MAKE SURE TO RUN AS ADMINISTRSTOR. WINDOWS REQUIRES ADMIN TO CREATE SHORTCUTS. WITHOUT AADMINISTRATOR, EVERYTHING SHOULD STILL WORK AS NORMAL EXCEPT WITHOUT A DESKTOP SHORTCUT. YOU CAN CREATE A SHORTCUT TO "C:\Bedrock\ui2.py" MANUALLY IF YOU WANT.')
+print ('TO CREATE A DESKTOP SHORTCUT, MAKE SURE TO RUN AS ADMINISTRSTOR. WINDOWS REQUIRES ADMIN TO CREATE SHORTCUTS. WITHOUT AADMINISTRATOR, EVERYTHING SHOULD STILL WORK AS NORMAL EXCEPT WITHOUT A DESKTOP SHORTCUT. YOU CAN CREATE A SHORTCUT TO "C:\\Bedrock\\ui2.py" MANUALLY IF YOU WANT.')
 time.sleep(10)
 
 for i in modules:
@@ -43,8 +43,8 @@ file_path = r'C:\Bedrock\bedrock_tools.py'
 urllib.request.urlretrieve(url, file_path)
 
 # Define the URL and file path
-url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/ui2.py'
-file_path = 'C:\Bedrock\ui2.py'
+url = 'https://github.com/CreepyTnt/Bedrock-tools/raw/main/ui.py'
+file_path = 'C:\\Bedrock\\ui.py'
 
 # Download the file and save it to the specified path
 urllib.request.urlretrieve(url, file_path)
@@ -66,7 +66,7 @@ f.write('C:\\Bedrock\\backup')
 f.close()
 
 f = open(r'C\Bedrock\days_between_backups.txt', 'w')
-f.write('30')
+f.write('0')
 f.close()
 
 f = open(r'C\Bedrock\last_backup.json', 'w')
@@ -75,5 +75,5 @@ f.close()
 
 
 
-print (os.system(r'mklink "C:\Users\jenni\Desktop\Bedrock Launcher.ink" "C:\Bedrock\ui2.py"'))
+print (os.system(r'mklink "C:\Users\jenni\Desktop\Bedrock Launcher.ink" "C:\Bedrock\ui.py"'))
 time.sleep(10)
