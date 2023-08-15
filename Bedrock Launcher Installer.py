@@ -36,11 +36,13 @@ file_path = 'C:\Bedrock\startup.py'
 urllib.request.urlretrieve(url, file_path)
 
 url = 'https://github.com/CreepyTnt/Bedrock-Launcher/raw/main/bedrock_startup.py'
-file_path = f'C:\\Users\\{username}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\BedrockLauncherBackups.pyw'
+try:
+    file_path = f'C:\\Users\\{username}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\BedrockLauncherBackups.pyw'
 
-# Download the file and save it to the specified path
-urllib.request.urlretrieve(url, file_path)
-
+    # Download the file and save it to the specified path
+    urllib.request.urlretrieve(url, file_path)
+except:
+    print ('error running backups on startup. try running as sudo/aadmin. the installation should continue as normal. to manually set up backups, visit my github repo.')
 
 
 # Define the URL and file path
