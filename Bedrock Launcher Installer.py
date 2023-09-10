@@ -78,6 +78,6 @@ f.close()
 
 
 
-print (os.system(r'mklink "C:\Users\%USERNAME#\Desktop\Bedrock Launcher.ink" "C:\Bedrock\ui.py"'))
+print (os.system(f'mklink "C:\\Users\\{username}\\Desktop\\Bedrock Launcher.ink" "C:\\Bedrock\\ui.py"'))
 time.sleep(10)
 
