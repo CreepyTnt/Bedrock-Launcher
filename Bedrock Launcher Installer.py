@@ -2,16 +2,9 @@ import os
 import urllib.request
 
 modules = [
-    'os',
-    'shutil',
     'datetime',
-    'json',
-    'getpass',
-    'shutil',
-    'zipfile',
-    'tkinter',
-    'win10toast',
-    'time'
+    'win10toast'
+
 ]
 import time
 
