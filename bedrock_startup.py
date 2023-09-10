@@ -12,6 +12,8 @@ print (options['last_backup'])
 print (options['days_between_backups'])
 
 if str(options['days_between_backups']) == '0':
+    print ('backups disabled')
+else:
     try:
         d0 = json.loads(options['last_backup'])
         d0 = date(d0[0], d0[1], d0[2])
