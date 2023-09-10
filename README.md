@@ -13,3 +13,6 @@ During installation, you will be prompted to install [fov changer](https://githu
 
 ### Automatic Backups
 The auto-backup script is already set to run on startup, however, as long as backup frequency is set to 0 (you can change this in the backup tab of the luancher) it will not backup the game. In the backup tab of the launcher, click "auto backup" and choose a folder to back up to and the backup frequency. It is reccomended to store backups in a seperate drive in case something happens to your entire main drive.
+
+Note that auto-backup is not fool-proof and may be unreliable. It is best to manually backup as well in case auto-backup fails.
+I am working on a standalone backuper that can back up any directory that will be much more reliable. I will probably bundle it with Bedrock Launcher when it is done.
