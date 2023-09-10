@@ -18,7 +18,7 @@ try:
     os.mkdir('C:\Bedrock')
 except:
     print('error creating directory: "C:\Bedrock"')
-    import getpass
+import getpass
 username = getpass.getuser()
 
 # Define the URL and file path
