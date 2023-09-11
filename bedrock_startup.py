@@ -4,16 +4,52 @@ from datetime import datetime
 import json
 from win10toast import ToastNotifier
 import time
+import shutil
+import getpass
+
+username = getpass.getuser()
 
 
-options = mc.get_options()
+def get_options():
+    f = open(f'C:\\Bedrock\\backup_location.txt', 'r')
+    installpath = f.read()
+    f.close()
+
+    f = open(f'C:\\Bedrock\\last_backup.json', 'r')
+    last_backup = f.read()
+    f.close()
+
+    f = open(f'C:\\Bedrock\\days_between_backups.txt', 'r')
+    days = f.read()
+    f.close()
+
+
+    return{
+        'backup_path' : installpath,
+        'last_backup' : last_backup,
+        'days_between_backups' : days
+    }
+
+def backup_worlds(backup_path):
+    print ('starting backup')
+    try:
+        shutil.copytree(f'C:\\Users\\{username}\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\minecraftWorlds', backup_path + '\\com.mojang\\\minecraftWorlds')
+    except:
+        print ('backup already exsists')
+        shutil.rmtree(backup_path + '\\com.mojang\\minecraftWorlds')
+        shutil.copytree(f'C:\\Users\\{username}\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\minecraftWorlds', backup_path + '\\com.mojang\\\minecraftWorlds')
+    f = open(f'C:\\Bedrock\\last_backup.json', 'w')
+    f.write(json.dumps([datetime.now().year, datetime.now().month, datetime.now().day]))
+    f.close()
+    print ('backup finished')
+
+
+options = get_options()
 print (options['backup_path'])
 print (options['last_backup'])
 print (options['days_between_backups'])
 
 if str(options['days_between_backups']) == '0':
-    print ('backups disabled')
-else:
     try:
         d0 = json.loads(options['last_backup'])
         d0 = date(d0[0], d0[1], d0[2])
